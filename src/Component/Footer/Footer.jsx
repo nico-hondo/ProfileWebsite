@@ -43,21 +43,21 @@ export default function Footer() {
             </div>
             <div className="footer-text mb-2" style={{color : darkMode ? '#9D9EA2' : 'black'}}>
                 <div className="footer-desc__made textChange" >Made using&nbsp;
-                    <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>ReactJS</a>,&nbsp;  
-                    <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Bootstrap</a>, and&nbsp; 
-                    <a href="https://airtable.com/" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Airtable</a>, Hosted in&nbsp; 
-                    <a href="https://www.hostinger.com/" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Hostinger</a>
+                    <a href="https://reactjs.org/" className='__linkme' target="_blank" rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>ReactJS</a>,&nbsp;  
+                    <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Bootstrap</a>, and&nbsp; 
+                    <a href="https://airtable.com/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Airtable</a>, Hosted in&nbsp; 
+                    <a href="https://www.hostinger.com/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Hostinger</a>
                 </div>
-                <div className="footer-desc__build textChange">MIT License © 2022 Nico Fernando Hondo</div>
+                <div className="footer-desc__build textChange">MIT License © 2023 Nico Fernando Hondo</div>
             </div>
             <div className="footer-function">
                 <div className="footer-disc sub">
-                    <a href="/" className="footer-disc__text " style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>
+                    <a href="/" className="__linkme" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>
                         Disclaimer
                     </a>
                 </div>
                 <div className="footer-priv sub">
-                    <a href="/" className="footer-priv__text" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>
+                    <a href="/" className="__linkme" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>
                         Privacy
                     </a>
                 </div>
