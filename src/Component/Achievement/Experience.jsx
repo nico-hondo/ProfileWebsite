@@ -50,7 +50,7 @@ const Experience = () => {
               Experience
             </h2>
             <p className='experience-text mt-3' style={{color : darkMode ? '#a0aec0' : '#4a5568'}}>
-                Here are some of the certificates when I was in college
+              Here are some of the milestones in my journey.
             </p>
           </div>
           <div className='experience-stack'>
