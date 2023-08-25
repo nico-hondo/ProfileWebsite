@@ -6,6 +6,7 @@ import About from '../About/AboutTab';
 import Project from '../Project/Project';
 import Experience from '../Achievement/Experience';
 import Blog from '../Blog/Blog';
+import Contact from '../Contact/Contact';
 
 const Navbar=() =>{
     
@@ -49,7 +50,7 @@ const Navbar=() =>{
     return(
 
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light me-auto">
+            <nav className="navbar navbar-expand-lg navbar-light me-auto" style={{backgroundColor : darkMode ? 'rgba(0, 0, 0, 0.64)' : 'rgba(255,255,255,0.64)', backdropFilter: darkMode ? 'blur(10px)' : 'blur(12px)'}}>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style={{border : darkMode ? '1px solid rgba(243, 242, 242)' : '1px' }}>
                     <span className="navbar-toggler-icon">
                     </span>
@@ -84,6 +85,7 @@ const Navbar=() =>{
             <Route path="project" element={<Project/>}/>
             <Route path="experience" element={<Experience/>}/>
             <Route path="blog" element={<Blog/>}/>
+            <Route path="contact" element={<Contact/>}/>
         </Routes>
         </div>
     )
