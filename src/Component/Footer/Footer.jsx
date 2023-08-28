@@ -45,8 +45,8 @@ export default function Footer() {
                 <div className="footer-desc__made textChange" >Made using&nbsp;
                     <a href="https://reactjs.org/" className='__linkme' target="_blank" rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>ReactJS</a>,&nbsp;  
                     <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Bootstrap</a>, and&nbsp; 
-                    <a href="https://airtable.com/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Airtable</a>, Hosted in&nbsp; 
-                    <a href="https://www.hostinger.com/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Hostinger</a>
+                    <a href="https://airtable.com/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Airtable</a>. Hosted in&nbsp; 
+                    <a href="https://vercel.com/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Vercel</a>
                 </div>
                 <div className="footer-desc__build textChange">MIT License © 2023 Nico Fernando Hondo</div>
             </div>

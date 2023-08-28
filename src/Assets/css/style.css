@@ -21,9 +21,9 @@
     line-height: 1.625;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
+    /* display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 1; this command line using for make .. if text overload from width page*/
     margin: 0;
 }
 
@@ -322,7 +322,7 @@
 .about-right-direction{
     display: flex;
     flex-direction: column;
-    padding: 170px 0px 0px 0px;
+    padding: 130px 0px 0px 0px;
 }
 .about-title{
     font-weight: 400;
@@ -330,9 +330,9 @@
 .about-text{
     margin: 20px 0px 0px 0px;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     width: 90%;
-    font-family: '__Inter_9c9965','__Inter_Fallback_9c9965';
+    font-family: system-ui;
     font-style: normal;
     font-feature-settings: "kern";
     line-height: 1.625;
@@ -357,8 +357,6 @@
         grid-template-columns: repeat(2, minmax(0px, 1fr));
     }
 }
-    
-
 .about-skill-label{
     font-size: 1.25rem;
     font-style: normal;
@@ -703,10 +701,9 @@ li{
     font-weight: 800;
 }
 .noPost-textDesc{
-    padding: 120.5px;
+    padding: 144.5px;
     /* background-color: violet; */
 }
-
 
 /* Styling Experience */
 .experience-container{
@@ -762,50 +759,6 @@ li{
     }
 } */
 
-/* Responsive Design - Content*/
-@media screen and (max-width: 480px) {
-    .my{
-        flex-direction: column;
-    }
-    .my-left-profil{
-        padding: 10px 10px 0px 10px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: 100%;
-    }
-    .my-name{
-        font-size: 40px;
-    }
-    /* .my-desc-wrapper{
-        display: none;
-    } */
-    .hr-pembatas{
-        display:block;
-        margin: 50px 120px 0px 120px;
-    }
-    .my-title{
-        height: 25px;
-    }
-    .my-title-wrapper{
-        height: 50%;
-    }
-    .my-title-item{
-        font-size: 20px;
-        align-items: center;
-        justify-content: center;
-    }
-    .my-pict{
-        margin-bottom: 2rem;
-    }
-    .my-name{
-        margin-bottom: 4rem;
-    }
-    .my-desc-wrapper{
-        font-size: 14px;
-    }
-}
-
 /* Responsive Styling - Navbar */
 @media screen and (max-width: 480px){
     
@@ -856,7 +809,48 @@ li{
 }
 
 /* Responsive styling - About */
-@media screen and (max-width: 480px){
+@media only screen and (min-width: 200px) and (max-width: 767px){
+    /* Responsive Design - Content*/
+    .my-left-profil{
+        padding: 10px 10px 0px 10px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+    }
+    .my-name{
+        font-size: 40px;
+    }
+    /* .my-desc-wrapper{
+        display: none;
+    } */
+    .hr-pembatas{
+        display:block;
+        margin: 50px 120px 0px 120px;
+    }
+    .my-title{
+        height: 25px;
+    }
+    .my-title-wrapper{
+        height: 50%;
+    }
+    .my-title-item{
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .my-pict{
+        margin-bottom: 2rem;
+    }
+    .my-name{
+        margin-bottom: 4rem;
+    }
+    .my-desc-wrapper{
+        font-size: 14px;
+    }
+    .noPost-textDesc{
+        padding: 120px 20px 120px 20px;
+    }
     .about{
         flex-direction:column;
         padding-top: 0 !important;
@@ -867,6 +861,7 @@ li{
     }
     .about-skill{
         padding: 0px;
+        margin-top: 350px;
     }
     .about-left{
         width: 100%;
@@ -878,7 +873,7 @@ li{
         left: 0px;
         margin-bottom: 3vh;
         border-radius: 5px;
-        width: 90%;
+        width: 100%;
     }
     .about-card.bg, .about-award{
         display: none;
@@ -891,7 +886,8 @@ li{
         padding: 0px;
     }
     .about-right-direction p{
-        font-size: 15px;
+        font-size: 17px;
+        width: 100%;
     }
     .about-desc{
         font-size: 15px;
@@ -906,10 +902,319 @@ li{
     .about-title{
         display: none;
     }
+    .about-end{
+        padding: 0px;
+        margin-top: 30px;
+        font-size: 14px;
+    }
+    .footer-icon__button{
+        width: 3em;
+        display: flex;
+        margin-left: 2em;
+    }
+}
+
+@media only screen and (min-width: 390px) and (max-width: 844px){
+    .my-left-profil{
+        padding: 10px 10px 0px 10px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+    }
+    .my-name{
+        font-size: 40px;
+    }
+    /* .my-desc-wrapper{
+        display: none;
+    } */
+    .hr-pembatas{
+        display:block;
+        margin: 50px 120px 0px 120px;
+    }
+    .my-title{
+        height: 25px;
+    }
+    .my-title-wrapper{
+        height: 50%;
+    }
+    .my-title-item{
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .my-pict{
+        margin-bottom: 2rem;
+    }
+    .my-name{
+        margin-bottom: 4rem;
+    }
+    .my-desc-wrapper{
+        font-size: 14px;
+    }
+    .noPost-textDesc{
+        padding: 205px 20px 205px 20px;
+    }
+    .about{
+        flex-direction:column;
+        padding-top: 0 !important;
+        display:grid;
+    }
+    .about-info{
+        display: grid;   
+    }
+    .about-skill{
+        padding: 0px;
+        margin-top: 200px;
+    }
+    .about-left{
+        width: 100%;
+        padding-top: 0 !important;
+        display: block;
+    }
+    .about-card{
+        height: 30vh;
+        left: 0px;
+        margin-bottom: 3vh;
+        border-radius: 5px;
+        width: 100%;
+    }
+    .about-card.bg, .about-award{
+        display: none;
+    }
+    .about-right{
+        padding: 20px 10px 20px 10px;
+        padding-bottom: 10px !important;
+    }
+    .about-right-direction{
+        padding: 0px;
+    }
+    .about-right-direction p{
+        font-size: 17px;
+        width: 100%;
+    }
+    .about-desc{
+        font-size: 15px;
+        width: 100%;
+    }
+    .about-desc .interest{
+        margin-top: 10px;
+    }
+    .about-sub{
+        margin: 10px 0px;
+    }
+    .about-title{
+        display: none;
+    }
+    .about-end{
+        padding: 0px;
+        margin-top: 30px;
+        font-size: 14px;
+    }
+    .footer-icon__button{
+        width: 3em;
+        display: flex;
+        margin-left: 4rem;
+    }
+}
+@media only screen and (min-width: 414px) and (max-width: 896px){
+    .my-left-profil{
+        padding: 10px 10px 0px 10px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+    }
+    .my-name{
+        font-size: 40px;
+    }
+    /* .my-desc-wrapper{
+        display: none;
+    } */
+    .hr-pembatas{
+        display:block;
+        margin: 50px 120px 0px 120px;
+    }
+    .my-title{
+        height: 25px;
+    }
+    .my-title-wrapper{
+        height: 50%;
+    }
+    .my-title-item{
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .my-pict{
+        margin-bottom: 2rem;
+    }
+    .my-name{
+        margin-bottom: 4rem;
+    }
+    .my-desc-wrapper{
+        font-size: 14px;
+    }
+    .noPost-textDesc{
+        padding: 198px 20px 198px 20px;
+    }
+    .footer{
+        padding-top: 50px;
+    }
+    .navbar{
+        display: inline-table;
+    }
+    .about{
+        flex-direction:column;
+        padding-top: 0 !important;
+        display:grid;
+    }
+    .about-info{
+        display: grid;   
+    }
+    .about-skill{
+        padding: 0px;
+        margin-top: 190px;
+    }
+    .about-left{
+        width: 100%;
+        padding-top: 0 !important;
+        display: block;
+    }
+    .about-card{
+        height: 30vh;
+        left: 0px;
+        margin-bottom: 3vh;
+        border-radius: 5px;
+        width: 100%;
+    }
+    .about-card.bg, .about-award{
+        display: none;
+    }
+    .about-right{
+        padding: 20px 10px 20px 10px;
+        padding-bottom: 10px !important;
+    }
+    .about-right-direction{
+        padding: 0px;
+    }
+    .about-right-direction p{
+        font-size: 17px;
+    }
+    .about-desc{
+        font-size: 15px;
+        width: 100%;
+    }
+    .about-desc .interest{
+        margin-top: 10px;
+    }
+    .about-sub{
+        margin: 10px 0px;
+    }
+    .about-title{
+        display: none;
+    }
+    .about-end{
+        padding: 0px;
+        margin-top: 30px;
+        font-size: 14px;
+    }
+    .toggle{
+        right: 30px;
+        top: 15px;
+    }
+    .footer-icon__button{
+        width: 3em;
+        display: flex;
+        margin-left: 4rem;
+    }
+}
+/* @media screen and (max-width: 992px){
+    .about-skill{
+        padding: 0px;
+        margin-top: 90px;
+    }
+} */
+
+/* for ipad responsive */
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .about{
+        flex-direction:column;
+        padding-top: 0 !important;
+        display:grid;
+    }
+    .about-info{
+        display: grid; 
+        margin-top: 20px;  
+    }
+    .about-skill{
+        padding: 0px;
+        margin: 0px;
+    }
+    .about-left{
+        width: 100%;
+        padding-top: 0 !important;
+        display: block;
+    }
+    .about-card{
+        height: 30vh;
+        left: 0px;
+        border-radius: 5px;
+        width: 100%;
+    }
+    .about-card.bg, .about-award{
+        display: none;
+    }
+    .about-right{
+        padding: 20px 10px 20px 10px;
+        padding-bottom: 10px !important;
+    }
+    .about-right-direction{
+        padding: 0px;
+    }
+    .about-right-direction p{
+        font-size: 17px;
+        width: 100%;
+    }
+    .about-desc{
+        font-size: 15px;
+        width: 100%;
+    }
+    .about-desc .interest{
+        margin-top: 10px;
+    }
+    .about-sub{
+        margin: 10px 0px;
+    }
+    .about-title{
+        display: none;
+    }
+    .about-end{
+        padding: 0px;
+        margin-top: 30px;
+        font-size: 14px;
+    }
+    .toggle{
+        right: 60px;
+        top: 20px;
+    }
+    .noPost-textDesc{
+        padding: 400px 20px 400px 20px;
+    }
+    .experience-container{
+        margin: 0px 150px 0px 150px;
+        padding: 30px 0px 30px 0px;
+    }
+    .footer-icon__button{
+        width: 3em;
+        place-content: left;
+        margin-left: 10em;
+        display: flex;
+    }
 }
 
 /* Responsive Styling Product List */
-@media  screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .pl{
         padding: 40px 10px;
     }
@@ -943,23 +1248,18 @@ li{
 /* Responsive styling Footer */
 @media screen and (max-width: 480px){
     .footer{
-        padding: 5px 0px 5px 0px;
+        padding: 40px 0px 5px 0px;
     }
     .footer-wrapper div{
         padding: 4px 0px 4px 0px;
     }
-    .footer-icon__button{
-        width: 3em;
-        display: flex;
-        margin-left: 2.3rem;
-    }
 }
 /* Responsive styling nopostContent */
-@media  screen and (max-width: 480px) {
+/* @media  screen and (max-width: 480px) {
     .noPost-textDesc{
-        padding: 100px 20px 100px 20px;
+        padding: 200px 20px 200px 20px;
     }
-}
+} */
 
 /* Responsive styling Experience */
 @media screen and (max-width: 480px){

@@ -33,7 +33,7 @@ const Content = () => {
                     </div>
                 </div>
                 <div className="my-desc-wrapper">
-                    Web and mobile developer enthusiast. Currently based on Medan, ID. You’ve found my personal slice of the internet, while you're here you can learn more about me.
+                    Web enthusiast. Currently based on South Tangerang, ID. You’ve found my personal slice of the internet, while you're here you can learn more about me.
                 </div>
             </div>
         </div>
