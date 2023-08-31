@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import img from '../../Assets/img/About-1.jpg';
-import gambar from '../../Assets/img/IMG_1780.jpg';
+import gambar from '../../Assets/img/DSC00684.JPG';
 import img1 from '../../Assets/img/welcome.jpg';
 import { ThemeContext } from '../../context-api';
 import DocumentMeta from 'react-document-meta';
