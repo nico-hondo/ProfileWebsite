@@ -322,7 +322,7 @@
 .about-right-direction{
     display: flex;
     flex-direction: column;
-    padding: 130px 0px 0px 0px;
+    padding: 80px 0px 0px 0px;
 }
 .about-title{
     font-weight: 400;
