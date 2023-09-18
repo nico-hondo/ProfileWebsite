@@ -912,6 +912,9 @@ li{
         display: flex;
         margin-left: 2em;
     }
+    .textChange{
+        font-size: 13px;
+    }
 }
 
 @media only screen and (min-width: 390px) and (max-width: 844px){
@@ -1015,6 +1018,9 @@ li{
         width: 3em;
         display: flex;
         margin-left: 4rem;
+    }
+    .textChange{
+        font-size: 13px;
     }
 }
 @media only screen and (min-width: 414px) and (max-width: 896px){
@@ -1128,6 +1134,9 @@ li{
         display: flex;
         margin-left: 4rem;
     }
+     .textChange{
+        font-size: 13px;
+    }
 }
 /* @media screen and (max-width: 992px){
     .about-skill{
@@ -1211,6 +1220,9 @@ li{
         margin-left: 10em;
         display: flex;
     }
+    .textChange{
+        font-size: 13px;
+    }
 }
 
 /* Responsive Styling Product List */
@@ -1252,6 +1264,9 @@ li{
     }
     .footer-wrapper div{
         padding: 4px 0px 4px 0px;
+    }
+    .textChange{
+        font-size: 13px;
     }
 }
 /* Responsive styling nopostContent */
