@@ -45,21 +45,38 @@ export default function Footer() {
                 </a>
             </div>
             <div className="footer-text mb-2" style={{color : darkMode ? '#9D9EA2' : 'black'}}>
-                <div className="footer-desc__made textChange" >Made using&nbsp;
+                
+                <div className="footer-desc__made textChange f2" >Made using&nbsp;
                     <a href="https://reactjs.org/" className='__linkme' target="_blank" rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>ReactJS</a>,&nbsp;  
                     <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Bootstrap</a>, and&nbsp; 
-                    <a href="https://airtable.com/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Airtable</a>. Hosted in&nbsp; 
-                    <a href="https://vercel.com/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Vercel</a>
+                    <a href="https://airtable.com/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Airtable</a>.
+                   
+                </div>
+                <div className="footer-desc_hosted textChange f2">
+                    Hosted in&nbsp; 
+                    <a href="https://vercel.com/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>
+                        Vercel
+                    </a>
+                </div>
+
+                <div className="footer-desc__made textChange f1" >Made using&nbsp;
+                    <a href="https://reactjs.org/" className='__linkme' target="_blank" rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>ReactJS</a>,&nbsp;  
+                    <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Bootstrap</a>, and&nbsp; 
+                    <a href="https://airtable.com/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Airtable</a>.
+                    Hosted in&nbsp; 
+                    <a href="https://vercel.com/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>
+                        Vercel
+                    </a>
                 </div>
                 <div className="footer-desc__build textChange">MIT License © {getTahun} Nico Fernando Hondo</div>
             </div>
             <div className="footer-function">
-                <div className="footer-disc sub">
+                <div className="footer-disc sub textChange">
                     <a href="/" className="__linkme" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>
                         Disclaimer
                     </a>
                 </div>
-                <div className="footer-priv sub">
+                <div className="footer-priv sub textChange">
                     <a href="/" className="__linkme" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>
                         Privacy
                     </a>
