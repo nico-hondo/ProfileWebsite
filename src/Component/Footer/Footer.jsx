@@ -6,6 +6,9 @@ export default function Footer() {
     const theme = useContext(ThemeContext)
     const darkMode = theme.state.darkMode
 
+    const getTime = new Date();
+    const getTahun = getTime.getFullYear();
+
   return (
     <div className="footer">
         <div className="footer-wrapper mt-4">
@@ -48,7 +51,7 @@ export default function Footer() {
                     <a href="https://airtable.com/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Airtable</a>. Hosted in&nbsp; 
                     <a href="https://vercel.com/" className='__linkme' target='_blank' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Vercel</a>
                 </div>
-                <div className="footer-desc__build textChange">MIT License © 2023 Nico Fernando Hondo</div>
+                <div className="footer-desc__build textChange">MIT License © {getTahun} Nico Fernando Hondo</div>
             </div>
             <div className="footer-function">
                 <div className="footer-disc sub">
