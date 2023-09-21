@@ -25,7 +25,7 @@ const Home = () => {
                 <div className='my-pict'>
                     <div className='my-pict__stack'>
                         <a href='/about' target="_self" aria-label='About' rel="noopener noreferrer">
-                            <img src={me} alt="Picture of the Author" className='my-img' loading='lazy' />
+                            <img alt="Picture of the Author" className='my-img' loading='lazy' decoding='async' style={{color: 'transaparent'}} src={me} />
                         </a>
                     </div>
                 </div>

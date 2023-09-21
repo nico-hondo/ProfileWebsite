@@ -1,5 +1,6 @@
-import React from 'react'
-import PostinganTidakAda from '../../tdakAdaPost';
+import React, {useContext} from 'react'
+import { ThemeContext } from '../../context-api';
+import ProjectList from './ProjectList';
 import DocumentMeta from 'react-document-meta';
 
 const Project = () => {
@@ -14,9 +15,28 @@ const Project = () => {
     }
   }
 
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
+
   return (
     <DocumentMeta {...meta}>
-        <PostinganTidakAda/>
+        <main className="project-container">
+        <section className='project-stack '>
+          <div className="project-wrapper-section">
+            <h2 className="project-heading">
+              Recent Project
+            </h2>
+            <p className='project-text' style={{color : darkMode ? '#a0aec0' : '#4a5568'}}>
+              Here are some of my past works from personal projects.
+            </p>
+          </div>
+          <div className='projectList-stack'>
+            <div className='css-p1'>
+                <ProjectList />
+            </div>
+          </div>
+        </section>
+      </main>
     </DocumentMeta>
   )
 }
