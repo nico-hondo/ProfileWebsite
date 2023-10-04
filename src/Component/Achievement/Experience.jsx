@@ -1,6 +1,7 @@
 import React, {Component, useContext} from 'react'
 import { ThemeContext } from '../../context-api'
 import ExperienceList from './ExperienceList'
+import ChoirDetail from './Choir'
 import DocumentMeta from 'react-document-meta'
 
 const Experience = () => {
@@ -54,12 +55,11 @@ const Experience = () => {
             </p>
           </div>
           <div className='experience-stack'>
-            <h4 className="experience-heading pt-4">
+            {/* <h4 className="experience-heading pt-4">
               Students Association
-            </h4>
+            </h4> */}
             <div className='mt-2'>
               <div className="experience-stack">
-                
                   <ExperienceList />
               </div>
             </div>

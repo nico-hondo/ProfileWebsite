@@ -42,7 +42,6 @@ const ExperienceList = () => {
       {experience.length > 0 ? (
         experience.map(record => ( 
           <div key={record.id}>
-            
             {/* Ini buatan Sendiri - menghilangkan Tanggal yang sama */}
               {record.fields.title_field === "Asisten Dosen" ? (
                 <div style={{display: 'none'}}>
@@ -74,7 +73,7 @@ const ExperienceList = () => {
                     <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z"/>
                     <path d="M8.5 6.5a.5.5 0 0 0-1 0V8H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V9H10a.5.5 0 0 0 0-1H8.5V6.5Z"/>
                   </svg>
-                  <a href={record.fields.link_field} target="_blank" rel="noopener noreferrer" className='experience-link' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>https://link.nicohondo.my.id/{record.fields.link_atribut}</a>
+                  <a href={record.fields.link_field} target="_blank" rel="noopener noreferrer" className='experience-link' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>https://link.nicofernando.my.id/{record.fields.link_atribut}</a>
                 </div>
               </li>
             </ul>
