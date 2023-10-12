@@ -54,7 +54,7 @@ const Experience = () => {
               Here are some of the milestones in my journey.
             </p>
           </div>
-          <div className='experience-stack'>
+          <div className='experience-stack pt-4'>
             {/* <h4 className="experience-heading pt-4">
               Students Association
             </h4> */}

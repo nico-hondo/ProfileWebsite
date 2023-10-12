@@ -34,7 +34,11 @@ const ExperienceList = () => {
   // }, []);
 
   const theme = useContext(ThemeContext);
-  const darkMode = theme.state.darkMode
+  const darkMode = theme.state.darkMode;
+
+  // const listStack = []
+
+  // listStack = experience.spl
 
     return (
       
@@ -43,7 +47,7 @@ const ExperienceList = () => {
         experience.map(record => ( 
           <div key={record.id}>
             {/* Ini buatan Sendiri - menghilangkan Tanggal yang sama */}
-              {record.fields.title_field === "Asisten Dosen" ? (
+              {record.fields.title_field === "Asisten Dosen" || record.fields.title_field === "Choir Participant as Tenor Voice - PND XXVIII"? (
                 <div style={{display: 'none'}}>
                   <h5 className="experience-heading" style={{fontWeight: '500', marginBottom: '1rem'}}>
                     {record.fields.year_field}
@@ -56,6 +60,7 @@ const ExperienceList = () => {
                   </h5>
                 </div>
               )}
+              
               
             <ul role="list">
               <li className="experience-textList">
