@@ -40,7 +40,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='my-desc-button'>
-                    <a className='my-resume __my-button-desc' href="https://drive.google.com/file/d/1QCycBj4RzM0K42fHmB1HbWPBt3QOKA_W/view?usp=sharing" target="_blank" aria-label='Email' rel="noopener noreferrer" style={{color: darkMode ? '#e2e8f0' : '#000'}}>
+                    <a className='my-resume __my-button-desc' href="https://drive.google.com/file/d/1qPmafRSA1p8RqVPWZhl7QHQe3XNKiGIG/view?usp=drive_link" target="_blank" aria-label='Email' rel="noopener noreferrer" style={{color: darkMode ? '#e2e8f0' : '#000'}}>
                         My Resume
                         <span className='my-button-icon'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-down my-svg-button" viewBox="0 0 16 16" >
