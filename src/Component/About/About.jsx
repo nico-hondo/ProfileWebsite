@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import img from '../../Assets/img/About-1.jpg';
-import img1 from '../../Assets/img/welcome.jpg';
+// import img from '../../Assets/img/About-1.jpg';
+// import img1 from '../../Assets/img/welcome.jpg';
 import { ThemeContext } from '../../context-api';
 
 const About = () => {
@@ -13,7 +13,7 @@ const About = () => {
         <div className="about-left">
             <div className="about-card bg"></div>
             <div className="about-card">
-                <img src={img} alt="" className="a-img" />
+                {/* <img src={img} alt="" className="a-img" /> */}
             </div>
         </div>
         <div className="about-right">
@@ -28,7 +28,7 @@ const About = () => {
                     </div>
                 </p>
                 <div className='about-award'>
-                    <img src={img1} alt="" className="about-award-img" />
+                    {/* <img src={img1} alt="" className="about-award-img" /> */}
                     <div className="about-award-text">
                         <h4 className="about-award-title">Member Of Web Programming UNPAS</h4>
                         <div className="about-award-desc">

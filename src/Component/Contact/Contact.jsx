@@ -3,7 +3,6 @@ import bca from '../../Assets/img/bca.png';
 // import bri from '../../Assets/img/bri.png';
 import emailjs from '@emailjs/browser';
 import { useState, useRef, useContext } from 'react';
-import swal from 'sweetalert';
 import { ThemeContext } from '../../context-api';
 import DocumentMeta from 'react-document-meta';
 
@@ -67,7 +66,7 @@ const Contact = () => {
           </p>
           <form ref={formRef} className='formContact' onSubmit={handleSubmit}>
             <label for='subject' className='label-input'>Subject <span>*</span></label>
-            <select class="form-control" style={{backgroundColor: darkMode? '#000' : 'white', borderColor : darkMode? '#222' : '#b9b7b7', color: darkMode? '#fff' : '#000'}} type="text" name="user_subject" id='subject'>
+            <select className="form-control" style={{backgroundColor: darkMode? '#000' : 'white', borderColor : darkMode? '#222' : '#b9b7b7', color: darkMode? '#fff' : '#000'}} type="text" name="user_subject" id='subject'>
               <option>Please select one...</option>
               <option>Project Discussion</option>
               <option>Event Invitation</option>

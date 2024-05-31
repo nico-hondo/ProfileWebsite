@@ -1,7 +1,5 @@
 import React, {useContext} from 'react'
-import img from '../../Assets/img/About-1.jpg';
-import gambar from '../../Assets/img/DSC00684.JPG';
-import img1 from '../../Assets/img/welcome.jpg';
+import gambar from '../../Assets/img/about/IMG_1087.JPG';
 import { ThemeContext } from '../../context-api';
 import DocumentMeta from 'react-document-meta';
 
@@ -21,29 +19,22 @@ const AboutTab = () => {
     }
   return (
     <DocumentMeta {...meta}>
-    <main className='container'>
+    <main className='container __about-css'>
         <section className='about'>
-            <div className='about-info'>
-                <div className="about-left">
-                    <div className="about-card bg"></div>
-                    <div className="about-card">
-                        <img src={gambar} alt="Picture of Author" className="a-img" />
-                    </div>
-                </div>
-                {/* #171923 */}
-                <div className="about-right">
-                    <div className="about-right-direction" style={{color: darkMode ? '#e2e8f0' : '#2d3748'}}>
-                        <p className="about-text">
-                            Hi there! My name is <strong>Nico Fernando Hondo</strong>, and <strong>Nico</strong> in short. Born and raised in <a className='__linkme' target="_blank" href='https://www.bing.com/search?q=medan&cvid=29a8082957154adb81a9097c85fd09ec&aqs=edge.0.0l9.1444j0j9&FORM=ANAB01&PC=U531' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Medan, ID</a> and now still living in <a className='__linkme' href='https://www.bing.com/search?q=medan&cvid=29a8082957154adb81a9097c85fd09ec&aqs=edge.0.0l9.1444j0j9&FORM=ANAB01&PC=U531' target="_blank" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Medan, ID</a>.
-                        </p>
-                        <p className='about-text'>
-                            Currently, I have completed a training with <a className='__linkme' href='https://www.code.id/' target="_blank" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>CODE ID</a> that focuses on improving my understanding of the <a className='__linkme' href='https://go.dev/' target="_blank" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Golang</a> Programming Language. Contributed to the jobhiring module, developing a <strong>backend service</strong>. This service will be one of the main important businesses when participants finish the training both offline and online can see a list of jobs that can be applied for.
-                        </p>
-                        <p className='about-text'>
-                           But for now, I spend more time exploring <strong>backend</strong> and <strong>frontend</strong> development mostly on <a className='__linkme' href='https://go.dev/' target="_blank" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Go</a>, <a className='__linkme' href='https://react.dev/' target="_blank" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>ReactJS</a> as codebases. My focused is centered on <a className='__linkme' href='https://go.dev/' target="_blank" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Go</a> programming, where I consistently doing efficient pratices, but am not shy about learning anything else. I thrive on problem-solving and value collaborative teamwork. My passion lies in continuous learning, accepting new challenges, and staying updated with new technologies.
-                        </p>
-                    </div>
-                </div>
+            {/* <div className="about-card bg"></div> */}
+            <div className="about-image">
+                <img src={gambar} alt="Author" className="a-img" sizes='100vw' decoding='async' data-nimg='fill'/>
+            </div>
+            <div className="about-right-direction" style={{color: darkMode ? '#e2e8f0' : '#2d3748'}}>
+                <p className="about-text">
+                    Hi there! My name is <strong>Nico Fernando Hondo</strong>, and <strong>Nico</strong> in short. Born and raised in <a className='__linkme' target="_blank" rel='noreferrer' href='https://www.bing.com/search?q=medan&cvid=29a8082957154adb81a9097c85fd09ec&aqs=edge.0.0l9.1444j0j9&FORM=ANAB01&PC=U531' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Medan, ID</a> and now still living in <a className='__linkme' href='https://www.bing.com/search?q=medan&cvid=29a8082957154adb81a9097c85fd09ec&aqs=edge.0.0l9.1444j0j9&FORM=ANAB01&PC=U531' target="_blank" rel='noreferrer' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Medan, ID</a>.
+                </p>
+                <p className='about-text'>
+                    Currently, I have completed a training with <a className='__linkme' href='https://www.code.id/' target="_blank" rel='noreferrer' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>CODE ID</a> that focuses on improving my understanding of the <a className='__linkme' href='https://go.dev/' target="_blank" rel='noreferrer' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Golang</a> Programming Language. Contributed to the jobhiring module, developing a <strong>backend service</strong>. This service will be one of the main important businesses when participants finish the training both offline and online can see a list of jobs that can be applied for.
+                </p>
+                <p className='about-text'>
+                    But for now, I spend more time exploring <strong>backend</strong> and <strong>frontend</strong> development mostly on <a className='__linkme' href='https://go.dev/' target="_blank" rel='noreferrer' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Go</a>, <a className='__linkme' href='https://react.dev/' target="_blank" rel='noreferrer' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>ReactJS</a> as codebases. My focused is centered on <a className='__linkme' href='https://go.dev/' target="_blank" rel='noreferrer' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Go</a> programming, where I consistently doing efficient pratices, but am not shy about learning anything else. I thrive on problem-solving and value collaborative teamwork. My passion lies in continuous learning, accepting new challenges, and staying updated with new technologies.
+                </p>
             </div>
             <div className='about-skill'>
                 <div>

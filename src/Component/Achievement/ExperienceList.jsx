@@ -1,50 +1,53 @@
 import React, {useEffect, useState, useContext} from 'react'
 import { ThemeContext } from '../../context-api'
+import axios from 'axios';
 // import DocumentMeta from 'react-document-meta';
 
 const ExperienceList = () => {
 
-  const [experience, setExperience] = useState([]);
-  // const [perbandingan, setPerbandingan] = useState([])
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://api.airtable.com/v0/app6kSlCI6D5XzhMQ/Experience_table?api_key=keyzYjDga7R9pY5tK&sort%5B0%5D%5Bfield%5D=year_field&sort%5B0%5D%5Bdirection%5D=asc')
-    .then((res)=> res.json())
-    .then((data) => {
-        console.log(data);
-        setExperience(data.records);
-    }).catch(err => {
-        console.log(err)
-    });
+    const fetchData = async () => {
+      const personalAccessToken = 'patjHUK5tYKCywfl7.0a233416cd6770ef39893b5ea61b72ab400a4cc541832a32d025d2374afe8ae2';
+      const baseId = 'app6kSlCI6D5XzhMQ';
+      const tableNamebyId = 'tblCJlWY2tUCrMPym';
+      const sortField = 'year_field';
+      const sortOrder = 'asc';
+      const url = `https://api.airtable.com/v0/${baseId}/${tableNamebyId}?sort[0][field]=${sortField}&sort[0][direction]=${sortOrder}`;
+
+      try{
+        const response = await axios.get(url, {
+          headers: {
+            'Authorization': `Bearer ${personalAccessToken}`
+          }
+        });
+
+        setData(response.data.records);
+        setLoading(false);
+
+        // console.log(response.data);
+
+      }catch(error){
+        console.error('Error fetching data from Database: ', error);
+        setLoading(false);
+      }
+    };
+    fetchData();
   }, []);
-
-  // useEffect(() => {
-
-  //   if(experience.length !== 0){
-  //     for(let i=0; i<experience.length; i++){
-  //       var perbandingan = experience[i] + 1;
-  //       if(experience[i].year_field == perbandingan){
-  //         setPerbandingan(experience.year_field)
-  //       }
-  //       else{
-  //         setPerbandingan(experience.year_field)
-  //       }
-  //     }
-  //   };
-  // }, []);
 
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
-  // const listStack = []
-
-  // listStack = experience.spl
+  if(loading){
+    return <div>Loading...</div>
+  }
 
     return (
       
       <>
-      {experience.length > 0 ? (
-        experience.map(record => ( 
+      {data.map(record => ( 
           <div key={record.id}>
             {/* Ini buatan Sendiri - menghilangkan Tanggal yang sama */}
               {record.fields.title_field === "Asisten Dosen" || record.fields.title_field === "Choir Participant as Tenor Voice - PND XXVIII"? (
@@ -61,8 +64,7 @@ const ExperienceList = () => {
                 </div>
               )}
               
-              
-            <ul role="list">
+            <ul>
               <li className="experience-textList">
                 <div className='experience-subTrack'>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-check2-circle experience-svg" viewBox="0 0 16 16" style={{color : darkMode ? 'rgba(250,240,137,255)' : '#36ad81'}}>
@@ -78,16 +80,26 @@ const ExperienceList = () => {
                     <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z"/>
                     <path d="M8.5 6.5a.5.5 0 0 0-1 0V8H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V9H10a.5.5 0 0 0 0-1H8.5V6.5Z"/>
                   </svg>
-                  <a href={record.fields.link_field} target="_blank" rel="noopener noreferrer" className='experience-link' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>https://link.nicofernando.my.id/{record.fields.link_atribut}</a>
+                  <a href={record.fields.link_field} target="_blank" rel="noopener noreferrer" className='experience-link' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>
+                    https://link.nicofernando.my.id/{record.fields.link_atribut}
+                  </a>
                 </div>
               </li>
             </ul>
+            {record.fields.title_field === "Panitia Seminar" || record.fields.title_field === "In House Training: Golang Programming Language"? (
+                <div style={{display: 'none'}}>
+                  <hr aria-orientation='horizontal' className='__hr-css'/>
+                </div>
+              ) : (
+                <div style={{display: 'block'}}>
+                  <hr aria-orientation='horizontal' className='__hr-css'/>
+                </div>
+              )}
+            
           </div>
           ))
-        ) : (
-          <p style={{padding: '56px', textAlign: 'center'}}>Fetching data...</p>
-        )}
-        </>
+        }
+      </>
     )
-  }
+}
 export default ExperienceList
