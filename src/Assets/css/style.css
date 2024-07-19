@@ -707,14 +707,14 @@ li{
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding-top: 200px;
+    justify-content: center;
 }
 .contact-right{
     flex: 1;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
 }
 .contact-title{
     font-size: 60px;
@@ -723,6 +723,7 @@ li{
 }
 .contact-title-desc{
     width: 90%;
+    font-weight: 600;
 }
 .contact-info-item{
     display: flex;
@@ -741,6 +742,7 @@ li{
 }
 .form-row{
     margin-top: 10px;
+    width: 100%;
 }
 .form-group{
     margin: 0;
@@ -762,15 +764,15 @@ li{
 .form-textarea #message{
     margin: 0;
 }
-.form-control {
+/* .form-control {
     --select-bg: #2d3748;
-}
+} */
 .form-control > option{
     background: var(--select-bg);
 }
 .formContact input{
     width: 100%;
-    height: 50px;
+    height: 40px;
     border: none;
     border: 1px solid #b9b7b7;
     font-size: 14px;
@@ -800,10 +802,7 @@ li{
     align-items: center;
     justify-content: center;
 }
-.formContact button:hover {
-    background-color: #fff;
-    color: #000;
-}
+
 
 /* Toggle Styling */
 .toggle{
@@ -968,33 +967,41 @@ li{
 
 /* Responsive styling - Contact */
 @media screen and (max-width: 480px){
+    .contact-bg{
+        display: none;
+    }
     .contact-wrapper{
         flex-direction: column;
-        padding: 0px 50px
+        padding: 0px 20px
     }
     .contact-left{
         margin-top: 0 !important;
     }
     .contact-title{
+        width: 100%;
         font-size: 30px;
+        text-align: center;
+    }
+    .contact-title-desc{
+        width: 100%;
+        font-weight: normal;
+        font-size: 1rem;
+        color: #8a91a1;
+        margin-top: 1.5rem;
     }
     .contact-info-item{
         margin: 20px 0px;
         width: 100%;
         font-size: 15px;
     }
-    .contact-title-desc{
-        display: none;
-    }
     .formContact{
-        margin-top: 0px;
+        margin-top: 1rem;
         display: flex;
         flex-wrap: wrap;
     }
     .formContact input{
-        width: 35%;
+        width: 100%;
         height: 40px;
-        margin: 10px;
         margin-left: 0;
     }
     .formContact button{
@@ -1482,7 +1489,7 @@ li{
 /* Responsive styling Footer */
 @media screen and (max-width: 480px){
     .footer{
-        padding: 40px 0px 5px 0px;
+        padding: 20px 0px 5px 0px;
     }
     .footer-wrapper div{
         padding: 4px 0px 4px 0px;

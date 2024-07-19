@@ -44,9 +44,9 @@ const Contact = () => {
     <div className="contact">
       <div className="contact-bg"></div>
       <div className="contact-wrapper">
-        <div className="contact-left">
+        <blockquote className="contact-left blockquote">
           <h1 className="contact-title">Get in Touch</h1>
-          <h5 className="contact-title-desc">Are you looking for a discussion partner or someone you can trust to help with your website?</h5>
+          <footer className="contact-title-desc blockquote-footer text-justify">Are you looking for a discussion partner or someone you can trust to help with your website?</footer>
           {/* <div className="contact-info">
             <div className="contact-info-item">
               <img src={bca} alt="" className="contact-icon" />
@@ -59,27 +59,30 @@ const Contact = () => {
               <img src={bca} alt="" className="contact-icon" />Jalan Sempurna Ujung
             </div>
           </div> */}
-        </div>
+        </blockquote>
         <div className="contact-right">
-          <p className="contact-right-desc">
+          <p className="contact-right-desc text-justify">
             <b>If so, </b>I am the right person and open for you to contact. There is no limit to contact me. There are several options that you can choose to chat, discuss, or just say hello.
           </p>
           <form ref={formRef} className='formContact' onSubmit={handleSubmit}>
-            <label for='subject' className='label-input'>Subject <span>*</span></label>
-            <select className="form-control" style={{backgroundColor: darkMode? '#000' : 'white', borderColor : darkMode? '#222' : '#b9b7b7', color: darkMode? '#fff' : '#000'}} type="text" name="user_subject" id='subject'>
-              <option>Please select one...</option>
-              <option>Project Discussion</option>
-              <option>Event Invitation</option>
-              <option>Other..</option>
-            </select>
+            <div className='from-row'>
+              <label for='subject' className='label-input'>Subject <span>*</span></label>
+              <select className="form-control" style={{backgroundColor: darkMode? '#000' : 'white', borderColor : darkMode? '#222' : '#b9b7b7', color: darkMode? '#fff' : '#000'}} type="text" name="user_subject" id='subject'>
+                <option>Please select one...</option>
+                <option>Project Discussion</
+                option>
+                <option>Event Invitation</option>
+                <option>Other..</option>
+              </select>
+            </div>
             <div className='form-row'>
               <div className='form-group col-md-6'>
-                <label for='name' className='label-input'>Nama <span>*</span></label>
-                <input className='contact-input' style={{backgroundColor: darkMode? '#000' : 'white', borderColor : darkMode? '#222' : '#b9b7b7', color: darkMode ? '#fff' : '#000'}} type="text" name="user_name" id='name'/>
+                <label for='name' className='label-input'>Name <span>*</span></label>
+                <input className='contact-input form-control' style={{backgroundColor: darkMode? '#000' : 'white', borderColor : darkMode? '#222' : '#b9b7b7', color: darkMode ? '#fff' : '#000'}} type="text" name="user_name" id='name'/>
               </div>
-              <div className='form-group col-md-6'>
+              <div className='form-group col-md-6 '>
                 <label for='phone' className='label-input'>Phone (Optional)</label>
-                <input className='contact-input' style={{backgroundColor: darkMode? '#000' : 'white', borderColor : darkMode? '#222' : '#b9b7b7', color: darkMode? '#fff' : '#000'}} type="text" name="user_phone" value={"+62"} id='phone'/>
+                <input className='contact-input' style={{backgroundColor: darkMode? '#000' : 'white', borderColor : darkMode? '#222' : '#b9b7b7', color: darkMode? '#fff' : '#000'}} type="text" name="user_phone" value='+62' id='phone'/>
               </div>
             </div>
             <div className='form-row'>
