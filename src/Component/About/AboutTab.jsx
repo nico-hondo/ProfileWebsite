@@ -25,7 +25,7 @@ const AboutTab = () => {
             <div className="about-image">
                 <img src={gambar} alt="Author" className="a-img" sizes='100vw' decoding='async' data-nimg='fill'/>
             </div>
-            <div className="about-right-direction" style={{color: darkMode ? '#e2e8f0' : '#2d3748'}}>
+            <div className="about-direction" style={{color: darkMode ? '#e2e8f0' : '#2d3748'}}>
                 <p className="about-text">
                     Hi there! My name is <strong>Nico Fernando Hondo</strong>, and <strong>Nico</strong> in short. Born and raised in <a className='__linkme' target="_blank" rel='noreferrer' href='https://www.bing.com/search?q=medan&cvid=29a8082957154adb81a9097c85fd09ec&aqs=edge.0.0l9.1444j0j9&FORM=ANAB01&PC=U531' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Medan, ID</a> and now still living in <a className='__linkme' href='https://www.bing.com/search?q=medan&cvid=29a8082957154adb81a9097c85fd09ec&aqs=edge.0.0l9.1444j0j9&FORM=ANAB01&PC=U531' target="_blank" rel='noreferrer' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>Medan, ID</a>.
                 </p>

@@ -24,7 +24,7 @@ p{
     border-style: solid;
     box-sizing: border-box;
     border-color: #e2e8f0;
-    word-wrap: break-word;
+    /* word-wrap: break-word; */
 }
 
 .portfolio-text{
@@ -76,17 +76,12 @@ p{
 } */
 
 /* Content */
-.my{
-    display: flex;
-    height: 85.2vh;
-    position: relative;
-}
 @media screen and (min-width: 768px){
     .my-section{
         min-height: calc(100vh - 100px);
     }
 }
-.my .__my-container{
+.__my-container{
     width: 100%;
     display: grid;
     margin-inline-start: auto;
@@ -94,6 +89,7 @@ p{
     max-width: 56rem;
     padding-inline-start: 1rem;
     padding-inline-end: 1rem;
+    padding: 1rem 0rem;
 }
 .my-section{
     display: flex;
@@ -102,8 +98,7 @@ p{
     -webkit-box-align: center;
     -webkit-box-pack: center;
     flex-direction: column;
-    position: relative;
-    overflow: hidden;
+    min-height: calc(-60px + 100vh);
 }
 .my-pict{
     overflow: hidden;
@@ -355,10 +350,17 @@ p{
     inset: 0px;
     color:transparent;
 }
-.about-right-direction{
+.about-direction{
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -webkit-flex-direction: column;
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
+    text-align: justify;
 }
 .about-title{
     font-weight: 400;
@@ -374,7 +376,8 @@ p{
 }
 .about-skill{
     display: grid;
-    grid-gap: 2rem;
+    row-gap: 1.5rem;
+    column-gap: 2rem;
     width: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -428,10 +431,11 @@ li{
 }
 .about-wrap__stack{
     display: flex;
-    flex: 1;
     -webkit-box-align: center;
     align-items: center;
     flex-direction: row;
+    gap: 0.5rem;
+    width: 110px;
 }
 @media screen and (min-width: 768px){
     .about-wrap__stack{
@@ -945,6 +949,7 @@ li{
 .experience-textList{
     margin: 0rem 0rem 1rem 0.5rem;
     list-style-type: none;
+    text-align: justify;
 }
 .experience-stack ul{
     padding: 0px;
@@ -1100,14 +1105,10 @@ li{
         border-radius: 5px;
         width: 100%;
     }
-    .about-right{
-        padding: 20px 10px 20px 10px;
-        padding-bottom: 10px !important;
-    }
-    .about-right-direction{
+    .about-direction{
         padding: 0px;
     }
-    .about-right-direction p{
+    .about-direction p{
         font-size: 17px;
         width: 100%;
     }
@@ -1129,7 +1130,6 @@ li{
     }
     .about-end{
         padding: 0px;
-        margin-top: 30px;
         font-size: 14px;
     }
     .footer-icon__button{
@@ -1217,14 +1217,10 @@ li{
         border-radius: 5px;
         width: 100%;
     }
-    .about-right{
-        padding: 20px 10px 20px 10px;
-        padding-bottom: 10px !important;
-    }
-    .about-right-direction{
+    .about-direction{
         padding: 0px;
     }
-    .about-right-direction p{
+    .about-direction p{
         font-size: 17px;
         width: 100%;
     }
@@ -1243,7 +1239,6 @@ li{
     }
     .about-end{
         padding: 0px;
-        margin-top: 30px;
         font-size: 14px;
     }
     .footer-icon__button{
@@ -1336,18 +1331,13 @@ li{
     .about-image{
         height: 30vh;
         left: 0px;
-        margin-bottom: 3vh;
         border-radius: 5px;
         width: 100%;
     }
-    .about-right{
-        padding: 20px 10px 20px 10px;
-        padding-bottom: 10px !important;
-    }
-    .about-right-direction{
+    .about-direction{
         padding: 0px;
     }
-    .about-right-direction p{
+    .about-direction p{
         font-size: 17px;
     }
     .about-desc{
@@ -1365,7 +1355,6 @@ li{
     }
     .about-end{
         padding: 0px;
-        margin-top: 30px;
         font-size: 14px;
     }
     .toggle{
@@ -1427,14 +1416,10 @@ li{
         border-radius: 5px;
         width: 100%;
     }
-    .about-right{
-        padding: 20px 10px 20px 10px;
-        padding-bottom: 10px !important;
-    }
-    .about-right-direction{
+    .about-direction{
         padding: 0px;
     }
-    .about-right-direction p{
+    .about-direction p{
         font-size: 17px;
         width: 100%;
     }
@@ -1453,7 +1438,6 @@ li{
     }
     .about-end{
         padding: 0px;
-        margin-top: 30px;
         font-size: 14px;
     }
     .toggle{
