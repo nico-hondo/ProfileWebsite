@@ -12,6 +12,9 @@ body{
 h1,h2,h3,h4,h5{
     margin-bottom: 0px;
 }
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto, input{
+    padding: 0px;
+}
 p{
     margin-bottom: 0px;
 
@@ -301,7 +304,6 @@ p{
     padding-inline-start: 1rem;
     -webkit-padding-end: 1rem;
     padding-inline-end: 1rem;
-    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 .about{
@@ -310,7 +312,7 @@ p{
     display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 }
 .about-image{
     position: relative;
@@ -356,12 +358,12 @@ p{
 .about-right-direction{
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 .about-title{
     font-weight: 400;
 }
 .about-text{
-    margin: 20px 0px 0px 0px;
     font-weight: 400;
     font-size: 16px;
     width: 100%;
@@ -409,6 +411,7 @@ p{
     -webkit-box-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+    gap: 0.5rem;
     list-style-type: none;
     padding: 0px;
     margin: calc(var(--wrap-y-spacing) * -1) calc(var(--wrap-x-spacing) * -1);
@@ -449,9 +452,6 @@ li{
     color: currentColor;
     vertical-align: middle;
     fill: currentColor;
-}
-.about-end{
-    margin-top: 1rem;
 }
 
 
@@ -545,7 +545,6 @@ li{
     display: grid;
     padding-inline-start: 1rem;
     padding-inline-end: 1rem;
-    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 .project-stack{
@@ -689,18 +688,22 @@ li{
 }
 
 /* Contact Styling */
-.contact{
+._contact-css{
+    width: 100%;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    max-width: 56rem;
+    display: grid;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
     position: relative;
-}
-.contact-bg{
-    width: 20px;
-    height: 100%;
-    background-color: #2756a3;
-    position: absolute;
 }
 .contact-wrapper{
     display: flex;
-    padding: 50px;
+    flex-direction: column;
+    gap: 2rem;
     height: 100%;
 }
 .contact-left{
@@ -708,6 +711,9 @@ li{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0px;
+    text-align: center;
+    gap: 1rem;
 }
 .contact-right{
     flex: 1;
@@ -717,8 +723,7 @@ li{
     /* align-items: center; */
 }
 .contact-title{
-    font-size: 60px;
-    width: 90%;
+    font-size: 50px;
     font-weight: 800;
 }
 .contact-title-desc{
@@ -742,7 +747,14 @@ li{
 }
 .form-row{
     margin-top: 10px;
-    width: 100%;
+    width: -webkit-fill-available;
+    margin-left: 0px;
+}
+.form-row>[class*=col-]{
+    padding-left: 0px;
+}
+.form-subject{
+    /* padding-right: 5px; */
 }
 .form-group{
     margin: 0;
@@ -758,7 +770,7 @@ li{
     color: red;
 }
 .form-textarea{
-    padding: 0px 5px 0px 5px;
+    /* padding: 0px 5px 0px 5px; */
     margin-bottom: 10px;
 }
 .form-textarea #message{
@@ -767,8 +779,9 @@ li{
 /* .form-control {
     --select-bg: #2d3748;
 } */
-.form-control > option{
+.form-control option{
     background: var(--select-bg);
+    font-size: 12px;
 }
 .formContact input{
     width: 100%;
@@ -777,7 +790,7 @@ li{
     border: 1px solid #b9b7b7;
     font-size: 14px;
     padding-left: 10px;
-    border-radius: 7px;
+    border-radius: 5px;
     outline: transparent solid 2px
 }
 .formContact textarea{
@@ -785,7 +798,7 @@ li{
     margin: 10px 0px;
     font-size: 14px;
     padding-left: 10px;
-    border-radius: 7px;
+    border-radius: 5px;
     border: 1px solid #b9b7b7;
 }
 .formContact button{
@@ -801,6 +814,17 @@ li{
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    display: none;
+}
+.contact-map{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 
@@ -899,7 +923,6 @@ li{
     padding-inline-start: 1rem;
     -webkit-padding-end: 1rem;
     padding-inline-end: 1rem;
-    padding-top: 1rem;
     padding-bottom: 1rem;
     font-size: 15px;
     /* padding: 30px 15px 30px 15px;
@@ -962,6 +985,13 @@ li{
     }
     .navbar{
         display: block;
+        position: fixed;
+        top: 5;
+        width: 100%;
+    }
+    .navbar-collapse{
+        overflow: hidden;
+        transition: height 0.5s ease;
     }
 }
 
@@ -972,26 +1002,22 @@ li{
     }
     .contact-wrapper{
         flex-direction: column;
-        padding: 0px 20px
     }
     .contact-left{
         margin-top: 0 !important;
     }
     .contact-title{
         width: 100%;
-        font-size: 30px;
+        font-size: 35px;
         text-align: center;
     }
     .contact-title-desc{
         width: 100%;
         font-weight: normal;
-        font-size: 1rem;
         color: #8a91a1;
         margin-top: 1.5rem;
     }
-    .contact-info-item{
-        margin: 20px 0px;
-        width: 100%;
+    .text-justify{
         font-size: 15px;
     }
     .formContact{
@@ -1062,7 +1088,6 @@ li{
     }
     .about-skill{
         padding: 0px;
-        margin-top: 350px;
     }
     .about-left{
         width: 100%;
@@ -1072,7 +1097,6 @@ li{
     .about-image{
         height: 30vh;
         left: 0px;
-        margin-bottom: 3vh;
         border-radius: 5px;
         width: 100%;
     }
@@ -1100,6 +1124,9 @@ li{
     .about-title{
         display: none;
     }
+    .about-wrap__list{
+
+    }
     .about-end{
         padding: 0px;
         margin-top: 30px;
@@ -1121,6 +1148,9 @@ li{
     }
     .footer-text{
         margin-bottom: 0px;
+    }
+    main{
+        padding-top: 70px;
     }
 }
 
@@ -1175,7 +1205,6 @@ li{
     }
     .about-skill{
         padding: 0px;
-        margin-top: 200px;
     }
     .about-left{
         width: 100%;
@@ -1185,7 +1214,6 @@ li{
     .about-image{
         height: 30vh;
         left: 0px;
-        margin-bottom: 3vh;
         border-radius: 5px;
         width: 100%;
     }
@@ -1235,8 +1263,14 @@ li{
     .footer-text{
         margin-bottom: 0px;
     }
+    main{
+        padding-top: 70px;
+    }
 }
 @media only screen and (min-width: 414px) and (max-width: 896px){
+    main{
+        padding-top: 56px;
+    }
     .my-left-profil{
         padding: 10px 10px 0px 10px;
         align-items: center;
@@ -1293,7 +1327,6 @@ li{
     }
     .about-skill{
         padding: 0px;
-        margin-top: 190px;
     }
     .about-left{
         width: 100%;
@@ -1344,7 +1377,7 @@ li{
         display: flex;
         margin-left: 4rem;
     }
-     .textChange{
+    .textChange{
         font-size: 13px;
     }
     .f1{
@@ -1509,5 +1542,12 @@ li{
 @media screen and (max-width: 480px){
     .experience-container{
         margin: 0px
+    }
+}
+
+/* Responsive styling Project */
+@media screen and (max-width: 480px) {
+    main{
+        padding-top: 70px;
     }
 }

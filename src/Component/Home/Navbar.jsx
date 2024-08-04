@@ -22,6 +22,16 @@ const Navbar=() =>{
         color: darkMode ? '#DDDEDF' : '#000'
     }
 
+    const[isCollapsed, setIsCollapsed] = useState(true);
+
+    const handleNavItemClick = () => {
+        setIsCollapsed(true);
+    }
+
+    const toggleNavbar = () =>{
+        setIsCollapsed(!isCollapsed);
+    }
+
     // function changeNavigateStyle(e){
     //     e.target.style.background = '#718096';
     // }
@@ -46,34 +56,35 @@ const Navbar=() =>{
     // }
 
     // const [bgColour, setBgColour] = useState("#8a91a1");
-
     return(
 
         <div>
             <nav className="navbar navbar-expand-lg navbar-light me-auto" style={{backgroundColor : darkMode ? 'rgba(0, 0, 0, 0.64)' : 'rgba(255,255,255,0.64)', backdropFilter: darkMode ? 'blur(10px)' : 'blur(12px)'}}>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style={{border : darkMode ? '1px solid rgba(243, 242, 242)' : '1px' }}>
+                <button className="navbar-toggler" type="button"
+                onClick={toggleNavbar}
+                data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" 
+                aria-label="Toggle navigation" 
+                style={{border : darkMode ? '1px solid rgba(243, 242, 242)' : '1px' }}
+                >
                     <span className="navbar-toggler-icon">
                     </span>
                 </button>
-                <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                    
+                <div className={`collapse navbar-collapse ${isCollapsed ? '' : 'show'} justify-content-center`} id="navbarNavAltMarkup">
                     <ul className="navbar-nav text-nav">
                         <li className="nav-item ">
-                            <a className="nav-link" >
-                                <NavLink to="/" style={({isActive}) => isActive ? activeStyle : changeStyle} id="changeNavigate">Home</NavLink>
-                            </a>
+                            <NavLink to="/" style={({isActive}) => isActive ? activeStyle : changeStyle} id="changeNavigate" className={'nav-link'} onClick={handleNavItemClick}>Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-decoration-none"> <NavLink to="/about" style={({isActive}) => isActive ? activeStyle : changeStyle}>About</NavLink></a>
+                            <NavLink to="/about" style={({isActive}) => isActive ? activeStyle : changeStyle} className={'nav-link'} onClick={handleNavItemClick}>About</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link"><NavLink to="/project" style={({isActive}) => isActive ? activeStyle : changeStyle}>Projects</NavLink></a>
+                            <NavLink to="/project" style={({isActive}) => isActive ? activeStyle : changeStyle} className={'nav-link'} onClick={handleNavItemClick}>Projects</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-dark"> <NavLink to="/experience" style={({isActive}) => isActive ? activeStyle : changeStyle}>Experience</NavLink></a>
+                            <NavLink to="/experience" style={({isActive}) => isActive ? activeStyle : changeStyle} className={'nav-link'} onClick={handleNavItemClick}>Experience</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-dark"> <NavLink to="/blog" style={({isActive}) => isActive ? activeStyle : changeStyle}>Blog</NavLink></a>
+                            <NavLink to="/blog" style={({isActive}) => isActive ? activeStyle : changeStyle} className={'nav-link'} onClick={handleNavItemClick}>Blog</NavLink>
                         </li>
                     </ul>
                 </div>
