@@ -65,6 +65,7 @@ p{
     width: 100px;
     text-align: center;
     justify-content: center;
+    background-color: transparent;
 }
 .text-nav a:hover{
     font-weight: 600;
@@ -756,9 +757,6 @@ li{
 }
 .form-row>[class*=col-]{
     padding-left: 0px;
-}
-.form-subject{
-    /* padding-right: 5px; */
 }
 .form-group{
     margin: 0;
