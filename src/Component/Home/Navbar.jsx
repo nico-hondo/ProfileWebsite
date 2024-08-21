@@ -7,19 +7,35 @@ import Project from '../Project/Project';
 import Experience from '../Achievement/Experience';
 import Blog from '../Blog/Blog';
 import Contact from '../Contact/Contact';
+import { styled } from '@chakra-ui/react';
+import { color } from 'framer-motion';
 
-const Navbar=() =>{
+const Navbar = () =>{
     
     const theme = useContext(ThemeContext)
     const darkMode = theme.state.darkMode
 
+    const[isHover, setIsHovered] = useState(true); //state untuk hover
+
+    //event handler untuk hover state
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
+
     let activeStyle = {
         color: darkMode ? 'rgba(250,240,137,255)' : '#176DE1',
         fontWeight: 600,
-    };
+    };  
 
     let changeStyle = {
         color: darkMode ? '#DDDEDF' : '#000'
+    }
+
+    const cekActiveStyle = {
+        color: darkMode ? (({isActive}) => isActive ? activeStyle : changeStyle)
     }
 
     const[isCollapsed, setIsCollapsed] = useState(true);
@@ -63,8 +79,7 @@ const Navbar=() =>{
                 <button className="navbar-toggler" type="button"
                 onClick={toggleNavbar}
                 data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" 
-                aria-label="Toggle navigation" 
-                style={{border : darkMode ? '1px solid rgba(243, 242, 242)' : '1px' }}
+                aria-label="Toggle navigation"
                 >
                     <span className="navbar-toggler-icon">
                     </span>
