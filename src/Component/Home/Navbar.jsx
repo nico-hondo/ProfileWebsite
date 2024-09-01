@@ -7,36 +7,37 @@ import Project from '../Project/Project';
 import Experience from '../Achievement/Experience';
 import Blog from '../Blog/Blog';
 import Contact from '../Contact/Contact';
-import { styled } from '@chakra-ui/react';
-import { color } from 'framer-motion';
 
 const Navbar = () =>{
     
     const theme = useContext(ThemeContext)
-    const darkMode = theme.state.darkMode
+    const darkMode = theme.state.darkMode //contnoh state dark mode
 
-    const[isHover, setIsHovered] = useState(true); //state untuk hover
+    const[isHover, setIsHovered] = useState(null); //state untuk menyimpan navlink yang sedang dihover oleh pointer mouse
 
     //event handler untuk hover state
-    const handleMouseEnter = () => {
-        setIsHovered(true);
+    const handleMouseEnter = (navItemId) => {
+        setIsHovered(navItemId);
     };
     const handleMouseLeave = () => {
-        setIsHovered(false);
+        setIsHovered(null);
     };
 
-    let activeStyle = {
+    // --untuk cek apakah navlink adalah navigasi yang aktif lalu sesuaikan darkmode dan apakah nav tersebut diberikan hover dengan pointer mouse atau tidak
+
+    //Ini untuk memberikan nilai berupa color, background setelah hover dan beserta font weight terhadap navigasi yang aktif
+    const activeStyle = (navItemId) => ({
         color: darkMode ? 'rgba(250,240,137,255)' : '#176DE1',
+        backgroundColor: darkMode ? (isHover === navItemId ? '#1f1f1f' : '') : (isHover === navItemId ? '#E6E9ED' : ''),
         fontWeight: 600,
-    };  
+        backdropFilter: 'blur(12px)'
+    });  
 
-    let changeStyle = {
-        color: darkMode ? '#DDDEDF' : '#000'
-    }
-
-    const cekActiveStyle = {
-        color: darkMode ? (({isActive}) => isActive ? activeStyle : changeStyle)
-    }
+    //Ini untuk memberikan nilai berupa color, background setelah hover terhadap navigasi yang tidak aktif, 
+    const changeStyle = (navItemId) => ({
+        color: darkMode ? '#DDDEDF' : '#000',
+        backgroundColor: darkMode ? (isHover === navItemId ? '#1f1f1f' : '') : (isHover === navItemId ? '#E6E9ED' : ''),
+    })
 
     const[isCollapsed, setIsCollapsed] = useState(true);
 
@@ -48,30 +49,6 @@ const Navbar = () =>{
         setIsCollapsed(!isCollapsed);
     }
 
-    // function changeNavigateStyle(e){
-    //     e.target.style.background = '#718096';
-    // }
-
-    // var change = document.getElementById("changeNavigate")
-    // change.addEventListener('mouseover', function(){
-    //     change.style.background="#718096"
-    // })
-    // change.addEventListener('mouseleave', function(){
-        
-    //     change.style.display="#fff"
-    // })
-
-    //hover for className in jsx
-    // const styles = {
-    //     myStyleHoverNav: {
-    //         fontWeight: 600,
-    //         backgroundColor: '#737373',
-    //         borderRadius: '5px',
-    //         color : darkMode ? '#fff' : '#000'
-    //     }
-    // }
-
-    // const [bgColour, setBgColour] = useState("#8a91a1");
     return(
 
         <div>
@@ -87,19 +64,35 @@ const Navbar = () =>{
                 <div className={`collapse navbar-collapse ${isCollapsed ? '' : 'show'} justify-content-center`} id="navbarNavAltMarkup">
                     <ul className="navbar-nav text-nav">
                         <li className="nav-item ">
-                            <NavLink to="/" style={({isActive}) => isActive ? activeStyle : changeStyle} id="changeNavigate" className={'nav-link'} onClick={handleNavItemClick}>Home</NavLink>
+                            <NavLink to="/" style={({isActive}) => (isActive ? activeStyle('home') : changeStyle('home'))}
+                             id="home" className={'nav-link'} 
+                            onClick={handleNavItemClick}
+                            onMouse
+                            onMouseEnter={() => handleMouseEnter('home')}
+                            onMouseLeave={handleMouseLeave}
+                            >
+                                Home
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to="/about" style={({isActive}) => isActive ? activeStyle : changeStyle} className={'nav-link'} onClick={handleNavItemClick}>About</NavLink>
+                            <NavLink to="/about" style={({isActive}) => (isActive ? activeStyle('about') : changeStyle('about'))}
+                             id="about" className={'nav-link'} onClick={handleNavItemClick} onMouseEnter={() => handleMouseEnter('about')}
+                            onMouseLeave={handleMouseLeave}>About</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to="/project" style={({isActive}) => isActive ? activeStyle : changeStyle} className={'nav-link'} onClick={handleNavItemClick}>Projects</NavLink>
+                            <NavLink to="/project" style={({isActive}) => (isActive ? activeStyle('project') : changeStyle('project'))}
+                             id="project" className={'nav-link'} onClick={handleNavItemClick} onMouseEnter={() => handleMouseEnter('project')}
+                            onMouseLeave={handleMouseLeave}>Projects</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to="/experience" style={({isActive}) => isActive ? activeStyle : changeStyle} className={'nav-link'} onClick={handleNavItemClick}>Experience</NavLink>
+                            <NavLink to="/experience" style={({isActive}) => (isActive ? activeStyle('experience') : changeStyle('experience'))}
+                             id="experience"className={'nav-link'} onClick={() => handleNavItemClick('experience')} onMouseEnter={() => handleMouseEnter('experience')}
+                            onMouseLeave={handleMouseLeave}>Experience</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to="/blog" style={({isActive}) => isActive ? activeStyle : changeStyle} className={'nav-link'} onClick={handleNavItemClick}>Blog</NavLink>
+                            <NavLink to="/blog" style={({isActive}) => (isActive ? activeStyle('blog') : changeStyle('blog'))}
+                             id="blog" className={'nav-link'} onClick={handleNavItemClick} onMouseEnter={() => handleMouseEnter('blog')}
+                            onMouseLeave={handleMouseLeave}>Blog</NavLink>
                         </li>
                     </ul>
                 </div>

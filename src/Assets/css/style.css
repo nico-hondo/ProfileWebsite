@@ -46,7 +46,7 @@ p{
     position: sticky;
     top: 0px;
     z-index: 10;
-    background: rgba(255,255,255,0.64);
+    background: rgba(255, 255, 255, 0.64);
     backdrop-filter: blur(12px);
 }
 @media screen and (min-width: 768px){
@@ -69,7 +69,6 @@ p{
 }
 .text-nav a:hover{
     font-weight: 600;
-    background-color: #E6E9ED;
     border-radius: 5px;
 }
 /* .text-nav a{
