@@ -1,6 +1,9 @@
 import React, { useContext } from 'react'
 import me from '../../Assets/img/Foto - NicoFernandoHondo.jpg'
 import { ThemeContext } from '../../context-api'
+import {Routes, NavLink, Route} from 'react-router-dom';
+import About from '../About/AboutTab';
+import Contact from '../Contact/Contact';
 import DocumentMeta from 'react-document-meta'
 
 const Home = () => {
@@ -23,9 +26,9 @@ const Home = () => {
         <section justify='space-evenly' className='my-section'>
             <div className='my-pict'>
                 <div className='my-pict__stack'>
-                    <a href='/about' target="_self" aria-label='About' rel="noopener noreferrer">
+                    <NavLink to='/about' target="_self" aria-label='About' rel="noopener noreferrer">
                         <img alt="The Author" className='my-img' loading='lazy' decoding='async' style={{color: 'transaparent'}} src={me} />
-                    </a>
+                    </NavLink>
                 </div>
             </div>
             <div className='my-desc'>
@@ -34,7 +37,7 @@ const Home = () => {
                     <div className="my-desc-wrapper">
                         A Full-Stack Engineer. Currently based on Medan, ID. 
                         <br/>
-                        You’ve found my personal slice of the internet, while you're here you can <a className='__linkme' href='/about' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>learn more about me</a>.
+                        You’ve found my personal slice of the internet, while you're here you can <NavLink className='__linkme' to='/about' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>learn more about me</NavLink>.
                     </div>
                 </div>
             </div>
@@ -48,13 +51,16 @@ const Home = () => {
                         </svg>
                     </span>
                 </a>
-                <a className='my-contact __my-button-desc' href="/contact" target="_self" aria-label='Email' rel="noopener noreferrer" style={{color: darkMode ? '#000' : '#e2e8f0', backgroundColor: darkMode ? '#e2e8f0' : '#000'}}>
+                <NavLink className='my-contact __my-button-desc' to="/contact" target="_self" aria-label='Email' rel="noopener noreferrer" style={{color: darkMode ? '#000' : '#e2e8f0', backgroundColor: darkMode ? '#e2e8f0' : '#000'}}>
                     Get in Touch
-                </a>
+                </NavLink>
             </div>
         </section>
     </main>
-        {/* <div className="hr-pembatas" style={{ borderTop : darkMode ?  "3px solid #fff" : "3px solid #000"}}></div> */}
+        <Routes>
+            <Route path="about" element={<About/>}/>
+            <Route path="contact" element={<Contact/>}/>
+        </Routes>
     </DocumentMeta>
   )
 }
