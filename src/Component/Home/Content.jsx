@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import me from '../../Assets/img/Foto - NicoFernandoHondo.jpg'
 import pict from '../../Assets/img/IMG_1114.JPG'
 import { ThemeContext } from '../../context-api'
 import {Routes, NavLink, Route} from 'react-router-dom';
