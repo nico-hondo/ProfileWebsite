@@ -7,6 +7,7 @@ import Project from '../Project/Project';
 import Experience from '../Achievement/Experience';
 import Blog from '../Blog/Blog';
 import Contact from '../Contact/Contact';
+import ResumePage from '../ResumePage/ResumePage';
 
 const Navbar = () =>{
     
@@ -105,6 +106,7 @@ const Navbar = () =>{
             <Route path="experience" element={<Experience/>}/>
             <Route path="blog" element={<Blog/>}/>
             <Route path="contact" element={<Contact/>}/>
+            <Route path="resume" element={<ResumePage/>}/>
         </Routes>
         </div>
     )

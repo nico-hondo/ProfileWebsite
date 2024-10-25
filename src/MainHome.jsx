@@ -1,25 +1,43 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Navbar from './Component/Home/Navbar';
-import Content from './Component/Home/Content';
 import './Assets/css/style.css'
-import About from './Component/About/About';
-import ProductList from './Component/Product/ProductList';
-import Contact from './Component/Contact/Contact'
 import Toogle from './Component/Toogle/Toogle';
 // Make Example
 import { ThemeContext } from './context-api';
 import Footer from './Component/Footer/Footer';
+import {Routes, Route, useLocation} from 'react-router-dom';
+import ResumePage from './Component/ResumePage/ResumePage';
 
 
 const MainHome = () => {
-  
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
+
+  const location = useLocation();
+  const[showNavAndFooterAndToogle, setShowNavAndFooterAndToogle] = useState(
+    location.pathname !== '/resume'
+  );
+  
+
+  useEffect(() => {
+    if(location.pathname === '/resume'){
+      setShowNavAndFooterAndToogle(false);
+    }else{
+      setShowNavAndFooterAndToogle(true);
+    }
+  }, [location.pathname]);
+
   return (
+
     <div style={{backgroundColor: darkMode ? '#000' : 'white', color: darkMode && 'white'}}> 
-        <Navbar/>
-        <Toogle/>
-        <Footer/>
+
+        {showNavAndFooterAndToogle && <Navbar/>}
+        <Routes>
+          <Route path='/resume' element={<ResumePage/>}/>
+        </Routes>
+        {showNavAndFooterAndToogle && <Toogle/>}
+        {showNavAndFooterAndToogle && <Footer/>}
+
     </div>
   )
 }
