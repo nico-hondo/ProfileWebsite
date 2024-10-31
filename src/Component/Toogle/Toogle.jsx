@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
-import Moon from '../../Assets/img/moon.png';
-import Sun from '../../Assets/img/sun.png';
+// import Moon from '../../Assets/img/moon.png';
+// import Sun from '../../Assets/img/sun.png';
 import { ThemeContext } from '../../context-api';
 
 const Toogle = () => {
