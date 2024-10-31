@@ -1263,7 +1263,7 @@ li{
         padding-top: 70px;
     }
 }
-@media only screen and (min-width: 414px) and (max-width: 896px){
+@media only screen and (min-width: 414px) and (max-width: 992px){
     main{
         padding-top: 56px;
     }
@@ -1443,10 +1443,9 @@ li{
         padding: 0px;
         font-size: 14px;
     }
-    .toggle{
+    /* .toggle{
         right: 60px;
-        top: 20px;
-    }
+    } */
     .noPost-textDesc{
         padding: 400px 20px 400px 20px;
     }
@@ -1520,12 +1519,6 @@ li{
         font-size: 13px;
     }
 }
-/* Responsive styling nopostContent */
-/* @media  screen and (max-width: 480px) {
-    .noPost-textDesc{
-        padding: 200px 20px 200px 20px;
-    }
-} */
 
 /* Responsive styling Experience */
 @media screen and (max-width: 480px){
@@ -1538,5 +1531,12 @@ li{
 @media screen and (max-width: 480px) {
     main{
         padding-top: 70px;
+    }
+}
+
+/* Responsive tyling toggle theme */
+@media screen and (min-width: 992px){
+    .toggle{
+        right: 60px;
     }
 }
