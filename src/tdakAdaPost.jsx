@@ -7,7 +7,7 @@ const TdakAdaPost = () => {
     const darkMode = theme.state.darkMode
 
   return (
-    <div className='noPost pt-5'>
+    <main className='noPost'>
         <h2>Recent Posts</h2>
         <div className='noPostWrapper' style={{color : darkMode ? '#9D9EA2' : '#818893'}}>
             <div className='noPost-text mt-3 mb-4'>
@@ -17,7 +17,7 @@ const TdakAdaPost = () => {
                 Don't have any posts.
             </div>
         </div>
-    </div>
+    </main>
   )
 }
 

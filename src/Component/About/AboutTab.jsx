@@ -1,11 +1,11 @@
 import React, {useContext} from 'react'
-import gambar from '../../Assets/img/about/IMG_1087.JPG';
 import { ThemeContext } from '../../context-api';
 import DocumentMeta from 'react-document-meta';
 
 const AboutTab = () => {
 
-  const theme = useContext(ThemeContext);
+    const aboutImg = `${process.env.PUBLIC_URL}/Assets/img/about/IMG_1087.JPG`;
+    const theme = useContext(ThemeContext);
     const darkMode = theme.state.darkMode;
 
     const meta = {
@@ -23,7 +23,7 @@ const AboutTab = () => {
         <section className='about'>
             {/* <div className="about-card bg"></div> */}
             <div className="about-image">
-                <img src={gambar} alt="Author" className="a-img" sizes='100vw' decoding='async' data-nimg='fill'/>
+                <img src={aboutImg} alt="Author" className="a-img" sizes='100vw' decoding='async' data-nimg='fill'/>
             </div>
             <div className="about-direction" style={{color: darkMode ? '#e2e8f0' : '#2d3748'}}>
                 <p className="about-text">

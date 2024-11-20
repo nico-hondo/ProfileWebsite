@@ -1,14 +1,11 @@
 import React, { useContext } from 'react'
-import pict from '../../Assets/img/IMG_1114.JPG'
 import { ThemeContext } from '../../context-api'
-import {Routes, NavLink, Route} from 'react-router-dom';
-import About from '../About/AboutTab';
-import Contact from '../Contact/Contact';
+import {NavLink} from 'react-router-dom';
 import DocumentMeta from 'react-document-meta';
-import ResumePage from '../ResumePage/ResumePage';
 
 const Home = () => {
 
+    const fotoProfile = `${process.env.PUBLIC_URL}/Assets/img/IMG_1114.JPG`
     const theme = useContext(ThemeContext)
     const darkMode = theme.state.darkMode
 
@@ -27,8 +24,8 @@ const Home = () => {
         <section justify='space-evenly' className='my-section'>
             <div className='my-pict'>
                 <div className='my-pict__stack'>
-                    <NavLink to='/about' target="_self" aria-label='About' rel="noopener noreferrer">
-                        <img alt="The Author" className='my-img' loading='lazy' decoding='async' style={{color: 'transaparent'}} src={pict} />
+                    <NavLink to='/about' target="_self" aria-label='About' rel="noopener noreferrer" className="my-pict__TargetNav">
+                        <img alt="The Author" className='my-img' loading='lazy' decoding='async' style={{color: 'transaparent'}} src={fotoProfile} />
                     </NavLink>
                 </div>
             </div>
@@ -69,11 +66,6 @@ const Home = () => {
             </div>
         </section>
     </main>
-        <Routes>
-            <Route path="about" element={<About/>}/>
-            <Route path="contact" element={<Contact/>}/>
-            <Route path='resume' element={<ResumePage/>}/>
-        </Routes>
     </DocumentMeta>
   )
 }
