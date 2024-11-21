@@ -886,6 +886,16 @@ li{
     transform: translate(-50%);
     border-radius: 100px;
     bottom: 0;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
 .__mobileIconText{
     font-size: 13px;
@@ -900,6 +910,15 @@ li{
     cursor: pointer;
     width: 100px;
     background: transparent;
+    color: #000;
+}
+.__toggleMobile.active{
+    color: #000;
+    text-decoration: none;
+}
+.__toggleMobile:hover{
+    color: #000;
+    text-decoration: none;
 }
 .__toggleMobile-icon{
     width: 3em;
@@ -935,6 +954,9 @@ li{
 }
 .modal-content{
     border-radius: 10px 10px 0 0;
+}
+.modal-header{
+    border-bottom: none;
 }
 .modal-body{
     padding-inline-start: 1.5rem;
@@ -975,7 +997,7 @@ li{
     width: 100%;
     font-weight: 400;
     text-decoration: none;
-    color: inherit;
+    color: #000;
 }
 .modal-link:hover{
     text-decoration: none;
@@ -1095,6 +1117,19 @@ li{
     font-weight: 520;
 }
 
+/* Responsive objective for screen having width max 400px */
+@media only screen and (max-width: 400px) {
+    .__toggleMobile{
+        width: 75px;
+    }
+    .__mobileIconText{
+        font-size: 11px;
+    }
+    .__my-button-desc{
+        width: 130px;
+        font-size: 14px;
+    }
+}
 /* Responsive styling - Max 480px - Mobile*/
 @media screen and (max-width: 480px) {
     main{
@@ -1102,6 +1137,7 @@ li{
     }
     .my-name{
         font-size: 2.25rem;
+        margin-bottom: 1rem;
     }
     /* Navbar */
     .nav-item .nav-link{
@@ -1173,14 +1209,8 @@ li{
     .f2{
         display: block;
     }
-    .footer-text{
-        margin-bottom: 0px;
-    }
     .footer{
         padding: 20px 0px 80px 0px;
-    }
-    .footer-wrapper div{
-        padding: 4px 0px 4px 0px;
     }
     /* toggle */
     .toggle{
@@ -1188,6 +1218,9 @@ li{
     }
     .__toggleTab{
         display: none;
+    }
+    .__mobileIconText{
+        font-size: 12px;
     }
     /* experience */
     .experience-container{
@@ -1313,6 +1346,9 @@ li{
     }
     .__toggleTab{
         display: none;
+    }
+    .__mobileIconText{
+        font-size: 12px;
     }
 }
 /* Responsive styling for big tablet(Landskap) */

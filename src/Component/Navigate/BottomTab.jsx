@@ -14,19 +14,19 @@ const BottomTab = () => {
 
     return(
         <div className="css-bottom" style={{backgroundColor: darkMode ? '#000' : '#fff'}}>
-            <div className="navbar-nav __mobile-navbar fixed-bottom mb-2">
+            <div className="__mobile-navbar fixed-bottom mb-2">
                 <li className='nav-item'>
-                    <NavLink className="__toggleMobile" to="/" id='home'>
-                        <BsFillHouseDoorFill className="__toggleMobile-icon" style={{color : darkMode ? '#000' : ''}}/>
+                    <NavLink className="__toggleMobile" to="/" id='home' style={{color : darkMode ? '#000' : ''}}>
+                        <BsFillHouseDoorFill className="__toggleMobile-icon" />
                         <p className="__mobileIconText">Home</p>
                     </NavLink>
                 </li>
 
                 <li className='nav-item'> 
-                    <NavLink className='__toggleMobile' to="/" onClick={handleClick} style={{backgroundColor: darkMode ? 'transparent' : 'transparent', borderColor : darkMode? '#222' : '#b9b7b7'}}>
+                    <div className='__toggleMobile' onClick={handleClick} style={{backgroundColor: darkMode ? 'transparent' : 'transparent', borderColor : darkMode? '#222' : '#b9b7b7'}}>
                         {darkMode ? <BsMoonFill className="__toggleMobile-icon" style={{color : darkMode ? '#000' : ''}}/> : <BsSunFill className="__toggleMobile-icon"/>}
                         <p className="__mobileIconText">Mode</p>
-                    </NavLink>
+                    </div>
                 </li>
 
                 <li className="nav-item">
@@ -40,25 +40,25 @@ const BottomTab = () => {
             {/* Modal */}
             <div className="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
                 <div className="modal-dialog" role="document" style={{backgroundColor: darkMode ? '#2D3748' : '#ffffff'}}>
-                    <div className="modal-content">
+                    <div className="modal-content" style={{backgroundColor : darkMode ? '#2d374e' : '#fff'}}>
                         <div className="modal-header">
                             <h5 className="modal-title" id="exampleModalLabel">Menu</h5>
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true" style={{color : darkMode ? '#fff' : '#000'}}>&times;</span>
                             </button>
                         </div>
                         <div className="modal-body">
-                            <div className="modal-stack">
-                                <NavLink className="modal-link" to="/about">
+                            <div className="modal-stack" >
+                                <NavLink className="modal-link" to="/about" style={{color : darkMode ? '#fff' : '#000'}}>
                                     About
                                 </NavLink>
-                                <NavLink className="modal-link" to="/project">
+                                <NavLink className="modal-link" to="/project" style={{color : darkMode ? '#fff' : '#000'}}>
                                     Projects
                                 </NavLink>
-                                <NavLink className="modal-link" to="/experience">
+                                <NavLink className="modal-link" to="/experience" style={{color : darkMode ? '#fff' : '#000'}}>
                                     Experience
                                 </NavLink>
-                                <NavLink className="modal-link" to="/blog">
+                                <NavLink className="modal-link" to="/blog" style={{color : darkMode ? '#fff' : '#000'}}>
                                     Blog
                                 </NavLink>
                             </div>
