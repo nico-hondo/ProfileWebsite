@@ -1,8 +1,9 @@
-import React, {useContext} from "react";
+import React, {useContext, useRef} from "react";
 import { NavLink } from "react-router-dom";
 import {BsFillHouseDoorFill, BsMoonFill, BsSunFill} from "react-icons/bs";
 import {HiOutlineMenuAlt1} from "react-icons/hi";
 import { ThemeContext } from "../../context-api";
+import $ from 'jquery';
 
 const BottomTab = () => {
 
@@ -11,6 +12,22 @@ const BottomTab = () => {
         theme.dispatch({type: "TOGGLE"})
     }
     const darkMode = theme.state.darkMode //contoh state dark mode
+    
+    // const modalRef = useRef();
+
+    // const closeModal = () => {
+    //     //akses dom modal menggunakan ref
+    //     if(modalRef.current){
+    //         modalRef.current.classList.remove("show");
+    //         modalRef.current.style.display = "none";
+    //         document.body.classList.remove("modal-open");
+    //         document.body.style = "";
+    //     }
+    // };
+
+    function closeModal(){
+        $('#myModal').modal('hide');
+    }
 
     return(
         <div className="css-bottom" style={{backgroundColor: darkMode ? '#000' : '#fff'}}>
@@ -38,7 +55,7 @@ const BottomTab = () => {
             </div>
 
             {/* Modal */}
-            <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+            <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document" style={{backgroundColor: darkMode ? '#2D3748' : '#ffffff'}}>
                     <div className="modal-content" style={{backgroundColor : darkMode ? '#2d374e' : '#fff'}}>
                         <div className="modal-header">
@@ -49,16 +66,16 @@ const BottomTab = () => {
                         </div>
                         <div className="modal-body">
                             <div className="modal-stack" >
-                                <NavLink className="modal-link" to="/about" style={{color : darkMode ? '#fff' : '#000'}}>
+                                <NavLink className="modal-link" to="/about" style={{color : darkMode ? '#fff' : '#000'}} onClick={closeModal}>
                                     About
                                 </NavLink>
-                                <NavLink className="modal-link" to="/project" style={{color : darkMode ? '#fff' : '#000'}}>
+                                <NavLink className="modal-link" to="/project" style={{color : darkMode ? '#fff' : '#000'}} onClick={closeModal}>
                                     Projects
                                 </NavLink>
-                                <NavLink className="modal-link" to="/experience" style={{color : darkMode ? '#fff' : '#000'}}>
+                                <NavLink className="modal-link" to="/experience" style={{color : darkMode ? '#fff' : '#000'}} onClick={closeModal}>
                                     Experience
                                 </NavLink>
-                                <NavLink className="modal-link" to="/blog" style={{color : darkMode ? '#fff' : '#000'}}>
+                                <NavLink className="modal-link" to="/blog" style={{color : darkMode ? '#fff' : '#000'}} onClick={closeModal}>
                                     Blog
                                 </NavLink>
                             </div>

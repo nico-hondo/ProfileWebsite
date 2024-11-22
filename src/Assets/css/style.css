@@ -1046,15 +1046,27 @@ li{
 /* Tidak Ada Postingan */
 .noPost{
     text-align: center;
-    font-size: 15px;
     /* background-color: tomato; */
+    padding: 10px;
+}
+.noPost-Wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    flex-direction: column;
+    min-height: calc(-60px + 100vh);
+    row-gap: 2rem;
 }
 .noPost h2{
     font-weight: 800;
 }
-.noPost-textDesc{
-    padding: 144.5px;
-    /* background-color: violet; */
+.noPost-Direction{
+    font-size: 13px;
+}
+.noPost-TextDesc{
+    font-size: 12px;
 }
 
 /* Styling Experience */
@@ -1154,6 +1166,9 @@ li{
     .navbar-collapse{
         overflow: hidden;
         transition: height 0.5s ease;
+    }
+    .portfolio-text{
+        font-size: 13px;
     }
     /* contact */
     .contact-bg{

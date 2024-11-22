@@ -247,10 +247,13 @@ const AboutTab = () => {
                 </div>
             </div>
             <div className='about-end'>
-                <p className='portfolio-text' style={{color: darkMode ? '#e2e8f0' : '#2d3748'}}>
-                    <div>You can reach out via email at&nbsp; 
-                    <span><a className="__linkme" href="mailto:nicohondo01@gmail.com" target="_blank" aria-label='Email' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>nicohondo01@gmail.com</a>, or via socials below.</span></div>
-                </p>
+                <div className='portfolio-text' style={{color: darkMode ? '#e2e8f0' : '#2d3748'}}>
+                    You can reach out via email at&nbsp; 
+                    <span>
+                        <a className="__linkme" href="mailto:nicohondo01@gmail.com" target="_blank" aria-label='Email' rel="noopener noreferrer" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>nicohondo01@gmail.com
+                        </a>, or via socials below.
+                    </span>
+                </div>
             </div> 
         </section>
     </main>
