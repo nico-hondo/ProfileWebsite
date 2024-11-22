@@ -1,7 +1,6 @@
-import React, {Component, useContext} from 'react'
+import React, {useContext} from 'react'
 import { ThemeContext } from '../../context-api'
 import ExperienceList from './ExperienceList'
-import ChoirDetail from './Choir'
 import DocumentMeta from 'react-document-meta'
 
 const Experience = () => {

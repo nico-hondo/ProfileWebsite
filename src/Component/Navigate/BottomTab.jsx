@@ -38,7 +38,7 @@ const BottomTab = () => {
             </div>
 
             {/* Modal */}
-            <div className="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+            <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
                 <div className="modal-dialog" role="document" style={{backgroundColor: darkMode ? '#2D3748' : '#ffffff'}}>
                     <div className="modal-content" style={{backgroundColor : darkMode ? '#2d374e' : '#fff'}}>
                         <div className="modal-header">

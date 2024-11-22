@@ -68,7 +68,7 @@ const Navbar = () =>{
                             <NavLink to="/" style={({isActive}) => (isActive ? activeStyle('home') : changeStyle('home'))}
                              id="home" className={'nav-link'} 
                             onClick={handleNavItemClick}
-                            onMouse
+                            // onMouse
                             onMouseEnter={() => handleMouseEnter('home')}
                             onMouseLeave={handleMouseLeave}
                             >
