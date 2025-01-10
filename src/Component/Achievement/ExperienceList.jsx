@@ -41,7 +41,18 @@ const ExperienceList = () => {
   const darkMode = theme.state.darkMode;
 
   if(loading){
-    return <div>Loading...</div>
+    return  <div className='loadData' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>
+              <span className='letter'>L</span>
+              <span className='letter'>o</span>
+              <span className='letter'>a</span>
+              <span className='letter'>d</span>
+              <span className='letter'>i</span>
+              <span className='letter'>n</span>
+              <span className='letter'>g</span>
+              <span className='letter'>.</span>
+              <span className='letter'>.</span>
+              <span className='letter'>.</span>
+            </div>
   }
 
     return (
@@ -50,7 +61,7 @@ const ExperienceList = () => {
       {data.map(record => ( 
           <div key={record.id}>
             {/* Ini buatan Sendiri - menghilangkan Tanggal yang sama */}
-              {record.fields.title_field === "Asisten Dosen" || record.fields.title_field === "Choir Participant as Tenor Voice - PND XXVIII"? (
+              {record.fields.title_field === "Asisten Dosen" || record.fields.title_field === "Choir Participant as Tenor Voice - PND XXVIII" || record.fields.title_field === "Winson Cold Storage" ? (
                 <div style={{display: 'none'}}>
                   <h5 className="experience-heading" style={{fontWeight: '500', marginBottom: '1rem'}}>
                     {record.fields.year_field}
@@ -81,12 +92,12 @@ const ExperienceList = () => {
                     <path d="M8.5 6.5a.5.5 0 0 0-1 0V8H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V9H10a.5.5 0 0 0 0-1H8.5V6.5Z"/>
                   </svg>
                   <a href={record.fields.link_field} target="_blank" rel="noopener noreferrer" className='experience-link' style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'}}>
-                    https://link.nicofernando.my.id/{record.fields.link_atribut}
+                    Read more
                   </a>
                 </div>
               </li>
             </ul>
-            {record.fields.title_field === "Panitia Seminar" || record.fields.title_field === "In House Training: Golang Programming Language"? (
+            {record.fields.title_field === "Panitia Seminar" || record.fields.title_field === "In House Training: Golang Programming Language" || record.fields.title_field === "Choir Participant as Tenor Voice - PND XXVIII"? (
                 <div style={{display: 'none'}}>
                   <hr aria-orientation='horizontal' className='__hr-css'/>
                 </div>

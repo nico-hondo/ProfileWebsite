@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import axios from 'axios';
+import { ThemeContext } from '../../context-api';
 // import ProjectPhp from '../../Assets/img/welcome.jpg';
 
 // "https://api.airtable.com/v0/app6kSlCI6D5XzhMQ/Project_table?maxRecords=3&view=Grid%20view" \
@@ -37,8 +38,23 @@ function ProjectList (){
         fetchData();
   }, []);
 
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
+
   if(loading){
-    return <div>Loading...</div>
+    return <div className="loadData " style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3', textAlign: darkMode ? 'center' : 'center'
+    }}>
+                <span className='letter'>L</span>
+                <span className='letter'>o</span>
+                <span className='letter'>a</span>
+                <span className='letter'>d</span>
+                <span className='letter'>i</span>
+                <span className='letter'>n</span>
+                <span className='letter'>g</span>
+                <span className='letter'>.</span>
+                <span className='letter'>.</span>
+                <span className='letter'>.</span>
+            </div>
   }
     return(
         <>
@@ -64,6 +80,7 @@ function ProjectList (){
             ))
             }
         </>
+        
     )
 }
 export default ProjectList
