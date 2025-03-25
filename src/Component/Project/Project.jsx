@@ -32,7 +32,7 @@ const Project = () => {
           </div>
           <div className='projectList-stack'>
             <div className='css-p1'>
-                <ProjectList />
+                <ProjectList/>
             </div>
           </div>
         </section>

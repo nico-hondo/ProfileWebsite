@@ -42,7 +42,7 @@ function ProjectList (){
   const darkMode = theme.state.darkMode;
 
   if(loading){
-    return <div className="loadData " style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3', textAlign: darkMode ? 'center' : 'center'
+    return <div className="loadData" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'
     }}>
                 <span className='letter'>L</span>
                 <span className='letter'>o</span>
