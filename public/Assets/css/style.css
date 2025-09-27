@@ -752,7 +752,7 @@ li{
     width: -webkit-fill-available;
     margin-left: 0px;
 }
-.form-row>[class*=col-]{
+.form-row>[className*=col-]{
     padding-left: 0px;
 }
 .form-group{
