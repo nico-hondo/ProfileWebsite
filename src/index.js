@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { ThemeProvider } from './context-api';
 import App from './MainHome';
 import reportWebVitals from './reportWebVitals';
+import { HelmetProvider } from 'react-helmet-async';
 
 import { BrowserRouter } from 'react-router-dom';
 
@@ -13,7 +14,9 @@ root.render(
   <React.StrictMode>
     <ThemeProvider>
       <BrowserRouter>
-        <App />
+        <HelmetProvider>
+          <App />
+        </HelmetProvider>
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>

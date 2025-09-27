@@ -84,8 +84,6 @@ const BottomTab = () => {
                 </div>
             </div>
         </div>
-
-        
     )
 
 }
