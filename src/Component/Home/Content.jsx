@@ -6,7 +6,7 @@ import {Helmet} from 'react-helmet-async';
 
 const Home = () => {
 
-    const fotoProfile = `${process.env.PUBLIC_URL}/Assets/img/IMG_1114.JPG`
+    const fotoProfile = `${process.env.PUBLIC_URL}/Assets/img/IMG_1111.JPG`
     const theme = useContext(ThemeContext)
     const darkMode = theme.state.darkMode
 

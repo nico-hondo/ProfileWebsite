@@ -5,7 +5,7 @@ import {Helmet} from 'react-helmet-async';
 
 const AboutTab = () => {
 
-    const aboutImg = `${process.env.PUBLIC_URL}/Assets/img/about/IMG_1087.JPG`;
+    const aboutImg = `${process.env.PUBLIC_URL}/Assets/img/about/IMG_1189.JPG`;
     const theme = useContext(ThemeContext);
     const darkMode = theme.state.darkMode;
 
