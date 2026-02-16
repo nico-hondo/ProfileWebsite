@@ -1,6 +1,6 @@
-import axios from "axios";
+const axios = require('axios');
 
-export default async function handler(req, res){
+module.exports = async function handler(req, res){
     try{
         const response = await axios.get(
             `https://api.airtable.com/v0/${process.env.BASE_ID}/${process.env.EXPERIENCE_TABLE_ID}?sort[0][field]=year_field&sort[0][direction]=asc`, 
