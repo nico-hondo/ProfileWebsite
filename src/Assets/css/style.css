@@ -658,7 +658,7 @@ li{
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: var(--nico-line-clamp);
+    line-clamp: var(--nico-line-clamp);
     --nico-line-clamp:2;
     text-align: center;
 }

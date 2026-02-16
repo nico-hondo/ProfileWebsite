@@ -37,11 +37,7 @@ const Project = () => {
                 Recent Project
               </h2>
               <p className='project-text' style={{color : darkMode ? '#a0aec0' : '#4a5568'}}>
-<<<<<<< HEAD
                 Here are some of my past works from personal projects and client website implementations.
-=======
-                Here are some of my past works from personal projects.
->>>>>>> 58dc9ba805a15f7c3c422d14f56a99346b45fb27
               </p>
             </div>
             <div className='projectList-stack'>
