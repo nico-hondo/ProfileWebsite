@@ -38,7 +38,7 @@ const ResumePage = () => {
             </Helmet>
             <div style={{height: "100vh", overflow: "hidden"}}>
                 <iframe 
-                    src="https://drive.google.com/file/d/1qPmafRSA1p8RqVPWZhl7QHQe3XNKiGIG/preview"
+                    src="https://drive.google.com/file/d/1UC9RNG2IK3IOzytbHgVMW6zrs3hXCGGJ/preview"
                     width="100%"
                     height="100%"
                     allow='autoplay' 

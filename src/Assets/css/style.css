@@ -36,6 +36,7 @@ p{
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1; this command line using for make .. if text overload from width page*/
     margin: 0;
+    font-size: 13px;
 }
 
 main{
