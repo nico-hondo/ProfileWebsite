@@ -1,6 +1,11 @@
 import React, {useContext, useEffect, useState} from 'react';
 import axios from 'axios';
+
+import { NavLink } from 'react-router-dom';
+
 import { ThemeContext } from '../../context-api';
+import { HiBookOpen } from "react-icons/hi2";
+import { IoIosLink } from "react-icons/io";
 // import ProjectPhp from '../../Assets/img/welcome.jpg';
 
 function ProjectList (){
@@ -22,12 +27,12 @@ function ProjectList (){
         fetchData();
     }, []);
 
+
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
   if(loading){
-    return <div className="loadData" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3'
-    }}>
+    return <div className="loadData" style={{color: darkMode ? 'rgba(250,240,137,255)' : '#2756a3', fontSize: '18px', fontWeight: 'semibold', display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1,}}>
                 <span className='letter'>L</span>
                 <span className='letter'>o</span>
                 <span className='letter'>a</span>
@@ -57,6 +62,16 @@ function ProjectList (){
                                         <span className='css-p2'>{record.fields.list_stack}</span>
                                     </li>
                                 </ul>
+                            </div>
+                            <div className='project-link'>
+                                <NavLink to={`/project/${record.fields.link_route}`} target="_blank" rel="noopener noreferrer" className='project-link__item' style={record.fields.link_route != null ? {display: 'flex'} : {display: 'none'}}>
+                                    <HiBookOpen className='project-link__icon'/>
+                                    <span className='project-link__text'>View Study Case</span>
+                                </NavLink>
+                                <a href={record.fields.link_external} target="_blank" rel="noopener noreferrer" className='project-link__item' style={record.fields.link_external != null ? {display: 'flex'} : {display: 'none'}}>
+                                    <IoIosLink className='project-link__icon'/>
+                                    <span className='project-link__text'>{record.fields.deskripsi === "website" ? 'Visit Website' : 'Visit'}</span>
+                                </a>
                             </div>
                         </div>
                     </div>

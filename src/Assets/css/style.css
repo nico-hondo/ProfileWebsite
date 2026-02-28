@@ -6,6 +6,7 @@
     position: fixed;
     z-index: 1;
 } */
+
 body{
     font-feature-settings: "kern";
 }
@@ -37,6 +38,16 @@ p{
     -webkit-line-clamp: 1; this command line using for make .. if text overload from width page*/
     margin: 0;
     font-size: 13px;
+}
+
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-wrapper main{
+    flex: 1;
 }
 
 main{
@@ -698,6 +709,32 @@ li{
     padding-inline-start: 0.5rem;
     padding-inline-end: 0.5rem;
 
+}
+.project-link{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.project-link__item{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: #e2e8f0;
+    text-decoration: none;
+}
+.project-link__item:hover{
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+}
+.project-link__icon{
+    width: 13px;
+    height: 13px;
+}
+.project-link__text{
+    font-size: 0.75rem;
 }
 
 /* Contact Styling */

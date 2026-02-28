@@ -53,5 +53,9 @@
   },
   "engines": {
     "node": "22.x"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.6"
   }
 }
